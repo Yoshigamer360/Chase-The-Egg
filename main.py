@@ -89,3 +89,31 @@ screen.listen()
 
 score_value = 0
 score2_value = 0
+
+# Game play loop
+while True:
+    player.forward(3)
+    player2.forward(3)
+    
+    # Check for collisions with food
+    if player.distance(food) < 20:
+        food.goto(random.randint((-width/2)+10, (width/2)-10),
+                  random.randint((-height/2)+10, (height/2)-10))
+        score_value += 10
+        score.clear()
+        score.write(f'Score: {score_value}', align='left', font=('Courier', 18, 'normal'))
+
+
+    if player2.distance(food) < 20:
+        food.goto(random.randint((-width/2)+10, (width/2)-10),
+                  random.randint((-height/2)+10, (height/2)-10))
+        score2_value += 10
+        score2.clear()
+        score2.write(f'Score: {score2_value}', align='left', font=('Courier', 18, 'normal'))
+    
+    # Check for collisions with the walls
+    x, y= player.position()
+    if abs(x) > (width/2) or abs(y) > (height/2): player.goto(0,0)
+
+    x, y= player2.position()
+    if abs(x) > (width/2) or abs(y) > (height/2): player2.goto(0,0)
