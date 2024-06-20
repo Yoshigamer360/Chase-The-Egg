@@ -23,3 +23,11 @@ player2.shape('turtle')
 player2.color('blue')
 player2.penup()
 player2.setheading(180)
+
+# Create the food turtle
+food = turtle.Turtle()
+food.shape('circle')
+food.color('yellow')
+food.penup()
+food.goto(random.randint((-width/2)+10, (width/2)-10),
+          random.randint((-height/2)+10, (height/2)-10))
