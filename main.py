@@ -32,6 +32,37 @@ food.penup()
 food.goto(random.randint((-width/2)+10, (width/2)-10),
           random.randint((-height/2)+10, (height/2)-10))
 
+# Create the obstacles
+
+
+# Create obstacle turtle
+obstacle_1 = turtle.Turtle()
+obstacle_1.shape('square')
+obstacle_1.color('white')
+obstacle_1.penup()
+obstacle_1.goto(random.randint((-width/2)+10, (width/2)-10),
+                random.randint(-240, -10))
+
+obstacle_2 = turtle.Turtle()
+obstacle_2.shape('square')
+obstacle_2.color('white')
+obstacle_2.penup()
+obstacle_2.goto(random.randint((-width/2)+10, (width/2)-10),
+                random.randint(10, 240))
+
+obstacle_3 = turtle.Turtle()
+obstacle_3.shape('square')
+obstacle_3.color('white')
+obstacle_3.penup()
+obstacle_3.goto(random.randint((-width/2)+10, (width/2)-10),
+                random.randint(10, 240))
+
+obstacle_4 = turtle.Turtle()
+obstacle_4.shape('square')
+obstacle_4.color('white')
+obstacle_4.penup()
+obstacle_4.goto(random.randint((-width/2)+10, (width/2)-10),
+                random.randint(-240, -10))
 
 # Create the score turtle
 score = turtle.Turtle()
