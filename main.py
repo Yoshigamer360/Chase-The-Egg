@@ -111,7 +111,7 @@ score.color('white')
 score.hideturtle()
 score.penup()
 score.goto((-width/2)+10, (height/2)-30)
-score.write('Player 1s score is 0', align='left', font=('Courier', 18, 'normal'))
+score.write('Player 1: 0', align='left', font=('Courier', 18, 'normal'))
 
 score2 = turtle.Turtle()
 score2.shape('circle')
@@ -119,7 +119,7 @@ score2.color('white')
 score2.hideturtle()
 score2.penup()
 score2.goto((-width/2)+10, (height/2)-495)
-score2.write('Player 2s score is 0', align='left', font=('Courier', 18, 'normal'))
+score2.write('Player 2: 0', align='left', font=('Courier', 18, 'normal'))
 
 # Set up the key bindings
 def go_up():
